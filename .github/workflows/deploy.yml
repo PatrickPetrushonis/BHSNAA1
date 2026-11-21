@@ -1,6 +1,5 @@
-# Builds and deploys to GitHub Pages on every push to master.
-# Pull requests run the build only. Intermediate workflow with no lint step,
-# for projects that have not been moved onto the profile's lint setup yet.
+# Lints, builds, and deploys to GitHub Pages on every push to master.
+# Pull requests run lint and build only.
 name: Deploy to GitHub Pages
 
 on:
@@ -29,6 +28,8 @@ jobs:
           package-manager-cache: false
       - name: Install
         run: npm ci
+      - name: Lint
+        run: npm run lint
       - name: Build
         run: npm run build
       - name: Configure Pages
