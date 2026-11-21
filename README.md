@@ -37,12 +37,9 @@ npm run lint
 
 ## Deployment
 
-Deployed to GitHub Pages under a custom domain (`www.bhsnaa1.org`, configured
-via `public/CNAME`). To publish:
-```
-npm run deploy
-```
-This builds the project and pushes `dist/` to the `gh-pages` branch. The
+Deployed to GitHub Pages under a custom domain (`www.bhsnaa1.org`, set in the
+repository's Pages settings). Pushing to `master` runs
+`.github/workflows/deploy.yml`, which lints, builds and deploys the site. The
 build process also generates a static `index.html` copy for every route and
 a `404.html` fallback, since GitHub Pages has no server-side rewrite and a
 plain client-side-routed SPA would otherwise 404 on a hard refresh or direct
