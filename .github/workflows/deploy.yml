@@ -1,10 +1,10 @@
-# Lints, builds, and deploys to GitHub Pages on every push to master.
+# Lints, builds, and deploys to GitHub Pages on every push to main.
 # Pull requests run lint and build only.
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
